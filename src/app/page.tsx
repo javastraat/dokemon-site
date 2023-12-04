@@ -33,7 +33,7 @@ sudo docker run -p 9090:9090 \\
           <img src="/logo/dokemon-dark-medium.svg" alt="Dokemon" />
         </h1>
         <h2 className="text-lg mb-6 text-center font-semibold">
-          Docker Container Management GUI for Virtual Machines
+          Docker Container Management GUI
         </h2>
         <h3 className="mb-10 text-center">
           Deploy compose files, start/stop containers, delete unused images,
@@ -95,10 +95,7 @@ sudo docker run -p 9090:9090 \\
               <h4 className="font-semibold">
                 Does this support Kubernetes and Docker Swarm?
               </h4>
-              <p>
-                No, currently we only support Standalone Docker on Linux Virtual
-                Machines.
-              </p>
+              <p>No, currently we only support Standalone Docker on Linux.</p>
             </li>
             <li>
               <h4 className="font-semibold">
