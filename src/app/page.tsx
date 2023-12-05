@@ -10,10 +10,10 @@ mkdir ./dokemondata
 
 # Run Dokemon
 sudo docker run -p 9090:9090 \\
-                -v ./dokemondata:/data \\
-                -v /var/run/docker.sock:/var/run/docker.sock \\
-                --restart unless-stopped \\
-                --name dokemon -d productiveops/dokemon:latest`;
+      -v ./dokemondata:/data \\
+      -v /var/run/docker.sock:/var/run/docker.sock \\
+      --restart unless-stopped \\
+      --name dokemon -d productiveops/dokemon:latest`;
 
   return (
     <>
@@ -47,7 +47,7 @@ sudo docker run -p 9090:9090 \\
         </div>
         <h3 className="text-lg font-bold mb-4">Get Started Now</h3>
         <div className="mb-4 text-xs sm:text-base">
-          <pre className="bg-slate-800 p-4 sm:p-8 focus:outline-none font-mono">
+          <pre className="bg-slate-800 p-4 sm:p-8 md:px-12 focus:outline-none font-mono">
             {command}
           </pre>
         </div>
