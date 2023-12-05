@@ -27,7 +27,7 @@ sudo docker run -p 9090:9090 \\
           gtag('config', 'GA_MEASUREMENT_ID');
         `}
       </Script>
-      <main className="flex min-h-screen flex-col items-center p-24 text-gray-300">
+      <main className="flex min-h-screen flex-col items-center pt-24 pb-8 px-8 text-gray-300">
         <h1 className="mb-6">
           <span className="sr-only">Dokemon</span>
           <img src="/logo/dokemon-dark-medium.svg" alt="Dokemon" />
@@ -46,8 +46,8 @@ sudo docker run -p 9090:9090 \\
           />
         </div>
         <h3 className="text-lg font-bold mb-4">Get Started Now</h3>
-        <div className="mb-4">
-          <pre className="bg-slate-800 px-8 py-4 focus:outline-none font-mono">
+        <div className="mb-4 text-xs sm:text-base">
+          <pre className="bg-slate-800 p-4 sm:p-8 focus:outline-none font-mono">
             {command}
           </pre>
         </div>
