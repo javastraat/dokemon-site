@@ -99,11 +99,11 @@ sudo docker run -p 9090:9090 \\
             </li>
             <li>
               <h4 className="font-semibold">
-                Can I manage multiple servers with one Dokemon instance?
+                How can I use variables in compose?
               </h4>
               <p>
-                Not currently. This feature is under development and planned to
-                be released in January 2024.
+                This feature is under development and will released in a few
+                weeks as part of version 1.2.
               </p>
             </li>
           </ul>
