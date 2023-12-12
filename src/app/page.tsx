@@ -102,7 +102,7 @@ sudo docker run -p 9090:9090 \\
                 How can I use variables in compose?
               </h4>
               <p>
-                This feature is under development and will released in a few
+                This feature is under development and will be released in a few
                 weeks as part of version 1.2.
               </p>
             </li>
