@@ -99,11 +99,11 @@ sudo docker run -p 9090:9090 \\
             </li>
             <li>
               <h4 className="font-semibold">
-                How can I use variables in compose?
+                Can I use compose files from my Git repository?
               </h4>
               <p>
                 This feature is under development and will be released in a few
-                weeks as part of version 1.2.
+                weeks as part of version 1.3.
               </p>
             </li>
           </ul>
