@@ -39,14 +39,8 @@ sudo docker run -p 9090:9090 \\
           Deploy compose files, start/stop containers, delete unused images,
           view logs.
         </h3>
-        <div className="mb-10">
-          <img
-            src="/screenshot-dokemon-images.jpg"
-            className="xl:max-w-[900px]"
-          />
-        </div>
         <h3 className="text-lg font-bold mb-4">Get Started Now</h3>
-        <div className="mb-4 text-xs sm:text-base">
+        <div className="mb-10 text-xs sm:text-base">
           <pre className="bg-slate-800 p-4 sm:p-8 md:px-12 focus:outline-none font-mono">
             {command}
           </pre>
@@ -61,6 +55,29 @@ sudo docker run -p 9090:9090 \\
           >
             Copy
           </button>
+        </div>
+        <div className="mb-10 text-center">
+          <h4 className="font-bold mb-2">Manage Multiple Servers</h4>
+          <img
+            src="/screenshot-dokemon-nodes.jpg"
+            className="xl:max-w-[900px]"
+          />
+        </div>
+        <div className="mb-10 text-center">
+          <h4 className="font-bold mb-2">
+            Manage Variables for Different Environments
+          </h4>
+          <img
+            src="/screenshot-dokemon-variables.jpg"
+            className="xl:max-w-[900px]"
+          />
+        </div>
+        <div className="mb-10 text-center">
+          <h4 className="font-bold mb-2">Deploy Compose Projects</h4>
+          <img
+            src="/screenshot-dokemon-compose-up.jpg"
+            className="xl:max-w-[900px]"
+          />
         </div>
         <div className="mb-16 md:max-w-[580px]">
           <h3 className="text-lg font-bold mb-4 text-center">
