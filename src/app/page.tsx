@@ -79,6 +79,15 @@ sudo docker run -p 9090:9090 \\
             className="xl:max-w-[900px]"
           />
         </div>
+        <div className="mb-10 text-center">
+          <h4 className="font-bold mb-2">
+            Manage Containers, Images, Volumes, Networks
+          </h4>
+          <img
+            src="/screenshot-dokemon-containers.jpg"
+            className="xl:max-w-[900px]"
+          />
+        </div>
         <div className="mb-16 md:max-w-[580px]">
           <h3 className="text-lg font-bold mb-4 text-center">
             Production Usage
