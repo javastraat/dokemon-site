@@ -32,13 +32,21 @@ sudo docker run -p 9090:9090 \\
           <span className="sr-only">Dokemon</span>
           <img src="/logo/dokemon-dark-medium.svg" alt="Dokemon" />
         </h1>
-        <h2 className="text-lg mb-6 text-center font-semibold">
+        <h2 className="text-lg mb-2 text-center font-semibold">
           Docker Container Management GUI
         </h2>
         <h3 className="mb-10 text-center">
           Deploy compose files, start/stop containers, delete unused images,
           view logs.
         </h3>
+        <div className="mb-10">
+          <iframe
+            src="https://ghbtns.com/github-btn.html?user=productiveops&repo=dokemon&type=star&count=true&size=large"
+            width="128"
+            height="30"
+            title="GitHub"
+          ></iframe>
+        </div>
         <h3 className="text-lg font-bold mb-4">Get Started Now</h3>
         <div className="mb-10 text-xs sm:text-base">
           <pre className="bg-slate-800 p-4 sm:p-8 md:px-12 focus:outline-none font-mono">
