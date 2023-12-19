@@ -141,8 +141,8 @@ sudo docker run -p 9090:9090 \\
                 This is to encourage writing reusable compose files with
                 variables. You develop such reusable compose files and add them
                 to the <em>Compose Library</em>. Then you can deploy the same
-                compose file to different services with different configuration
-                (variable values).
+                compose file to different nodes (servers) with different
+                configuration (variable values).
                 <br />
                 We will look at improving the UX in future versions to make it
                 easier to create compose files from the Node.
