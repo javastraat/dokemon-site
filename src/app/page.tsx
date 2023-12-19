@@ -134,7 +134,7 @@ sudo docker run -p 9090:9090 \\
             <li>
               <h4 className="font-semibold">
                 Why do I need to add compose files in <em>Compose Library</em>{" "}
-                and then add them to the Nodes? Why can&quot;t I directly create
+                and then add them to the Nodes? Why can&apos;t I directly create
                 compose files in the Node?
               </h4>
               <p>
@@ -151,7 +151,7 @@ sudo docker run -p 9090:9090 \\
             <li>
               <h4 className="font-semibold">
                 I like to keep my compose variables alongside the stack. But I
-                don&quot;t see the option to do so. I only see the option to
+                don&apos;t see the option to do so. I only see the option to
                 create variables at global level.
               </h4>
               <p>
