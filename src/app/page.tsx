@@ -133,11 +133,30 @@ sudo docker run -p 9090:9090 \\
             </li>
             <li>
               <h4 className="font-semibold">
-                Can I use compose files from my Git repository?
+                Why do I need to add compose files in <em>Compose Library</em>{" "}
+                and then add them to the Nodes? Why can't I directly create
+                compose files in the Node?
               </h4>
               <p>
-                This feature is under development and will be released in a few
-                weeks as part of version 1.3.
+                This is to encourage writing reusable compose files with
+                variables. You develop such reusable compose files and add them
+                to the <em>Compose Library</em>. Then you can deploy the same
+                compose file to different services with different configuration
+                (variable values).
+                <br />
+                We will look at improving the UX in future versions to make it
+                easier to create compose files from the Node.
+              </p>
+            </li>
+            <li>
+              <h4 className="font-semibold">
+                I like to keep my compose variables alongside the stack. But I
+                don't see the option to do so. I only see the option to create
+                variables at global level.
+              </h4>
+              <p>
+                This feature is under development and will be released in coming
+                weeks.
               </p>
             </li>
           </ul>
