@@ -133,23 +133,6 @@ sudo docker run -p 9090:9090 \\
             </li>
             <li>
               <h4 className="font-semibold">
-                Why do I need to add compose files in <em>Compose Library</em>{" "}
-                and then add them to the Nodes? Why can&apos;t I directly create
-                compose files in the Node?
-              </h4>
-              <p>
-                This is to encourage writing reusable compose files with
-                variables. You develop such reusable compose files and add them
-                to the <em>Compose Library</em>. Then you can deploy the same
-                compose file to different nodes (servers) with different
-                configuration (variable values).
-                <br />
-                We will look at improving the UX in future versions to make it
-                easier to create compose files from the Node.
-              </p>
-            </li>
-            <li>
-              <h4 className="font-semibold">
                 I like to keep my compose variables alongside the stack. But I
                 don&apos;t see the option to do so. I only see the option to
                 create variables at global level.
