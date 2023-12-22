@@ -17,7 +17,7 @@ sudo docker run -p 9090:9090 \\
 
   return (
     <>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-BEE2MV8YYZ" />
+      <Script src="https://www.googletagmanager.com/gtag/js?id=G-NENE81HEKH" />
       <Script id="google-analytics">
         {`
           window.dataLayer = window.dataLayer || [];
