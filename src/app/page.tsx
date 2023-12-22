@@ -35,7 +35,7 @@ sudo docker run -p 9090:9090 \\
         <h2 className="text-lg mb-2 text-center font-semibold">
           Docker Container Management GUI
         </h2>
-        <h3 className="mb-10 text-center">
+        <h3 className="mb-4 text-center">
           Deploy compose files, start/stop containers, delete unused images,
           view logs.
         </h3>
@@ -47,13 +47,14 @@ sudo docker run -p 9090:9090 \\
             title="GitHub"
           ></iframe>
         </div>
+
         <h3 className="text-lg font-bold mb-4">Get Started Now</h3>
-        <div className="mb-10 text-xs sm:text-base">
+        <div className="mb-4 text-xs sm:text-base">
           <pre className="bg-slate-800 p-4 sm:p-8 md:px-12 focus:outline-none font-mono">
             {command}
           </pre>
         </div>
-        <div className="mb-16">
+        <div className="mb-8">
           <button
             type="button"
             className="w-24 rounded-md bg-amber-600 px-2.5 py-1.5 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
@@ -63,6 +64,15 @@ sudo docker run -p 9090:9090 \\
           >
             Copy
           </button>
+        </div>
+        <div className="mb-12">
+          <a
+            className="w-24 rounded-md bg-amber-600 px-2.5 py-2 text-sm font-semibold text-white shadow-sm hover:bg-amber-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-600"
+            href="https://docs.dokemon.dev"
+            target="_blank"
+          >
+            Read the Documentation
+          </a>
         </div>
         <div className="mb-10 text-center">
           <h4 className="font-bold mb-2">Manage Multiple Servers</h4>
