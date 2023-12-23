@@ -141,17 +141,6 @@ sudo docker run -p 9090:9090 \\
               </h4>
               <p>No, currently we only support Standalone Docker on Linux.</p>
             </li>
-            <li>
-              <h4 className="font-semibold">
-                I like to keep my compose variables alongside the stack. But I
-                don&apos;t see the option to do so. I only see the option to
-                create variables at global level.
-              </h4>
-              <p>
-                This feature is under development and will be released in coming
-                weeks.
-              </p>
-            </li>
           </ul>
         </div>
         <ul className="flex gap-10">
