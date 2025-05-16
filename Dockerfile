@@ -37,7 +37,7 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN npm install -g npm@latest
 
-RUN npx  update-browserslist-db@1.1.3
+RUN npx update-browserslist-db@1.1.3
 
 RUN yarn build
 
