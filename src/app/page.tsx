@@ -17,16 +17,6 @@ sudo docker run -p 9090:9090 \\
 
   return (
     <>
-      <Script src="https://www.googletagmanager.com/gtag/js?id=G-NENE81HEKH" />
-      <Script id="google-analytics">
-        {`
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
- 
-          gtag('config', 'GA_MEASUREMENT_ID');
-        `}
-      </Script>
       <main className="flex min-h-screen flex-col items-center pt-24 pb-8 px-8 text-gray-300">
         <h1 className="mb-6">
           <span className="sr-only">Dokemon</span>

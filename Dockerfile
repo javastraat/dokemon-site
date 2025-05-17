@@ -1,3 +1,5 @@
+#FROM node:18-alpine AS base
+
 FROM node:23.11.1-alpine AS base
 
 # Install dependencies only when needed
@@ -7,6 +9,15 @@ RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
 RUN npm install -g npm@latest
+
+# Install dependencies based on the preferred package manager
+#COPY package.json yarn.lock* package-lock.json* pnpm-lock.yaml* ./
+#RUN \
+#  if [ -f yarn.lock ]; then yarn --frozen-lockfile; \
+  #elif [ -f package-lock.json ]; then npm ci; \
+  #elif [ -f pnpm-lock.yaml ]; then yarn global add pnpm && pnpm i --frozen-lockfile; \
+  #else echo "Lockfile not found." && exit 1; \
+  #fi
 
 # Install dependencies based on the preferred package manager
 COPY package.json package-lock.json* yarn.lock* pnpm-lock.yaml* ./
@@ -37,7 +48,8 @@ ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN npm install -g npm@latest
 
-RUN npx update-browserslist-db@1.1.3
+#RUN npx browserslist@latest --update-db
+RUN npx  update-browserslist-db@1.1.3
 
 RUN yarn build
 
