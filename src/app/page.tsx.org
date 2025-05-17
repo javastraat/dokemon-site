@@ -3,7 +3,6 @@
 import Script from "next/script";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDiscord, faGithub } from "@fortawesome/free-brands-svg-icons";
-import Image from "next/image";
 
 export default function Home() {
   const command = `# Create directory to store Dokemon data
@@ -14,55 +13,14 @@ sudo docker run -p 9090:9090 \\
       -v ./dokemondata:/data \\
       -v /var/run/docker.sock:/var/run/docker.sock \\
       --restart unless-stopped \\
-      --name dokemon -d javastraat/dokemon-server:latest`;
-
-  const traefikConfig = `version: "3.3"
-
-services:
-  traefik:
-    image: "traefik:v2.10"
-    container_name: "traefik"
-    command:
-      - "--log.level=DEBUG"
-      - "--accesslog=true"
-      - "--api.insecure=true"
-      - "--providers.docker=true"
-      - "--providers.docker.exposedbydefault=false"
-      - "--entrypoints.websecure.address=:443"
-      - "--certificatesresolvers.dokemon.acme.tlschallenge=true"
-      - "--certificatesresolvers.dokemon.acme.email=your.email@example.com"
-      - "--certificatesresolvers.dokemon.acme.storage=/letsencrypt/dokemon.json"
-    ports:
-      - "443:443"
-      - "8080:8080"
-    volumes:
-      - "./letsencrypt:/letsencrypt"
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-
-  dokemon:
-    image: javastraat/dokemon-server:latest
-    container_name: dokemon
-    restart: unless-stopped
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.dokemon.rule=Host(\`dokemon.example.com\`)"
-      - "traefik.http.routers.dokemon.entrypoints=websecure"
-      - "traefik.http.routers.dokemon.tls.certresolver=dokemon"
-    volumes:
-      - ./dokemondata:/data
-      - /var/run/docker.sock:/var/run/docker.sock`;
+      --name dokemon -d productiveops/dokemon:latest`;
 
   return (
     <>
       <main className="flex min-h-screen flex-col items-center pt-24 pb-8 px-8 text-gray-300">
         <h1 className="mb-6">
           <span className="sr-only">Dokemon</span>
-          <Image
-            src="/logo/dokemon-dark-medium.svg"
-            alt="Dokemon"
-            width={200}
-            height={50}
-          />
+          <img src="/logo/dokemon-dark-medium.svg" alt="Dokemon" />
         </h1>
         <h2 className="text-lg mb-2 text-center font-semibold">
           Docker Container Management GUI
@@ -73,7 +31,7 @@ services:
         </h3>
         <div className="mb-10">
           <iframe
-            src="https://ghbtns.com/github-btn.html?user=javastraat&repo=dokemon&type=star&count=true&size=large"
+            src="https://ghbtns.com/github-btn.html?user=productiveops&repo=dokemon&type=star&count=true&size=large"
             width="128"
             height="30"
             title="GitHub"
@@ -108,11 +66,8 @@ services:
         </div>
         <div className="mb-10 text-center">
           <h4 className="font-bold mb-2">Manage Multiple Servers</h4>
-          <Image
+          <img
             src="/screenshot-dokemon-nodes.jpg"
-            alt="Dokemon nodes management interface"
-            width={900}
-            height={500}
             className="xl:max-w-[900px]"
           />
         </div>
@@ -120,21 +75,15 @@ services:
           <h4 className="font-bold mb-2">
             Manage Variables for Different Environments
           </h4>
-          <Image
+          <img
             src="/screenshot-dokemon-variables.jpg"
-            alt="Dokemon variables management interface"
-            width={900}
-            height={500}
             className="xl:max-w-[900px]"
           />
         </div>
         <div className="mb-10 text-center">
           <h4 className="font-bold mb-2">Deploy Compose Projects</h4>
-          <Image
+          <img
             src="/screenshot-dokemon-compose-up.jpg"
-            alt="Dokemon compose project deployment interface"
-            width={900}
-            height={500}
             className="xl:max-w-[900px]"
           />
         </div>
@@ -142,11 +91,8 @@ services:
           <h4 className="font-bold mb-2">
             Manage Containers, Images, Volumes, Networks
           </h4>
-          <Image
+          <img
             src="/screenshot-dokemon-containers.jpg"
-            alt="Dokemon container management interface"
-            width={900}
-            height={500}
             className="xl:max-w-[900px]"
           />
         </div>
@@ -158,32 +104,17 @@ services:
             We recommend that you run Dokemon on a private network whenever
             possible.
           </p>
-          <p className="mb-4">
+          <p>
             If you are running on a VPS with only public access, we recommend
-            that you use an SSL enabled reverse proxy in front of Dokemon.
+            that you use an SSL enabled reverse proxy in front of Dokemon. See{" "}
+            <a
+              className="underline underline-offset-4"
+              href="https://github.com/ProductiveOps/dokemon"
+              target="_blank"
+            >
+              example configuration with Traefik.
+            </a>
           </p>
-          
-          <h4 className="font-bold mb-2 mt-6">Using Traefik with LetsEncrypt SSL certificate</h4>
-          <p className="mb-4 text-sm">
-            This is an example configuration for running Dokémon behind Traefik with LetsEncrypt SSL certificate.
-            <br /><br />
-            <span className="text-amber-400">Note:</span> This is a sample configuration. Please modify it as per your requirements.
-          </p>
-          
-          <div className="mb-4 text-xs sm:text-base">
-            <pre className="bg-slate-800 p-4 sm:p-8 md:px-12 focus:outline-none font-mono">
-              {traefikConfig}
-            </pre>
-          </div>
-          
-          <div className="mt-4 text-sm">
-            <p className="mb-2">1. In the DNS settings for your domain, add an A record for the Host which you have mentioned in the above config.</p>
-            <p className="mb-2">2. Create a file named <code>compose.yaml</code> on your server and paste the above configuration.</p>
-            <p className="mb-2">3. Modify the email and host in the configuration.</p>
-            <p className="mb-2">4. Run: <code>mkdir ./letsencrypt && mkdir ./dokemondata</code></p>
-            <p className="mb-2">5. Run: <code>docker compose up -d</code></p>
-            <p>6. Access your instance at <code>https://your-domain.com</code> (it may take a few moments for SSL certificate provisioning).</p>
-          </div>
         </div>
         <div className="mb-16 md:w-[580px]">
           <h3 className="text-lg font-bold mb-4 text-center">FAQ</h3>
@@ -220,7 +151,7 @@ services:
           <li>
             <a
               className="flex items-center gap-2 text-sm"
-              href="https://github.com/javastraat/dokemon/issues"
+              href="https://github.com/productiveops/dokemon/issues"
               target="_blank"
             >
               <FontAwesomeIcon

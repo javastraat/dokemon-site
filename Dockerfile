@@ -47,6 +47,7 @@ COPY . .
 ENV NEXT_TELEMETRY_DISABLED 1
 
 RUN npm install -g npm@latest
+RUN npm i sharp
 
 RUN npx update-browserslist-db@1.1.3
 

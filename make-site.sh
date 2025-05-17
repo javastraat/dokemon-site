@@ -1,1 +1,1 @@
-sudo docker build -t dokemon-site -f Dockerfile .
+sudo docker build -t javastraat/dokemon-site -f Dockerfile .
